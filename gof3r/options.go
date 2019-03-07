@@ -113,7 +113,7 @@ func homeDir() (string, error) {
 	return "", fmt.Errorf("home directory not found for current user")
 }
 
-// add canned acl to http.Header
+// ACL adds canned acl to http.Header
 func ACL(h http.Header, acl string) http.Header {
 	if acl != "" {
 		h.Set("x-amz-acl", acl)

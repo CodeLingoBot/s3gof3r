@@ -146,7 +146,7 @@ type multiTest struct {
 	err    error
 }
 
-// Tests of multipart puts and gets
+// TestMulti tests of multipart puts and gets
 // Since the minimum part size is 5 mb, these take longer to run
 // These tests can be skipped by running test with the short flag
 func TestMulti(t *testing.T) {
@@ -463,7 +463,7 @@ func TestGetReadAfterClose(t *testing.T) {
 	}
 }
 
-// Test Close when downloading of parts still in progress
+// TestGetCloseBeforeRead tests Close when downloading of parts still in progress
 func TestGetCloseBeforeRead(t *testing.T) {
 	r, _, err := b.GetReader(getTests[4].path, getTests[4].config)
 	if err != nil {

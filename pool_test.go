@@ -11,7 +11,7 @@ import (
 	"time"
 )
 
-// The test causes data races due to reading the log buffer and setting bp.time
+// TestBP: The test causes data races due to reading the log buffer and setting bp.time
 func TestBP(t *testing.T) {
 
 	// send log output to buffer
